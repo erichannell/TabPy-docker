@@ -24,4 +24,6 @@ if you want to install new packages just run:
 then `pip install` whatever you want
 
  to run the container use this line:
- docker run -ti --rm -p 9004:9004 emhemh/tabpy:latest /bin/bash start.sh
+`docker run -ti --rm -p 9004:9004 emhemh/tabpy:latest /bin/bash start.sh`
+
+![TabPy](https://github.com/erichannell/TabPy-docker/blob/master/tabpy.gif "TabPy")
