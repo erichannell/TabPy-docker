@@ -2,7 +2,7 @@
 
 Steps to create container:
 
-1. `docker run -ti continuumio/miniconda:latest /bin/bash`` 
+1. `docker run -ti continuumio/miniconda:latest /bin/bash`
 
 2. Then inside the container run:
 ```
