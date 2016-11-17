@@ -19,11 +19,8 @@ cd /opt/conda/envs/Tableau-Python-Server/lib/python2.7/site-packages/tabpy_serve
 /bin/bash startup.sh 9004
 ```
 
-if you want to install new packages just run:
-`source activate Tableau-Python-Server`
-then `pip install` whatever you want
+If you want to install new packages just run: `source activate Tableau-Python-Server` and then `pip install` whatever you want.
 
- to run the container use this line:
-`docker run -ti --rm -p 9004:9004 emhemh/tabpy:latest /bin/bash start.sh`
+To run the container use this line: `docker run -ti --rm -p 9004:9004 emhemh/tabpy:latest /bin/bash start.sh`
 
 ![TabPy](https://github.com/erichannell/TabPy-docker/blob/master/tabpy.gif "TabPy")
