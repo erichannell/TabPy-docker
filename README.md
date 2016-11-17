@@ -5,9 +5,9 @@ Steps to create container:
 1. `docker run -ti continuumio/miniconda:latest /bin/bash`` 
 
 2. Then inside the container run: 
-```git clone https://github.com/tableau/TabPy.git
-cd /TabPy
-/bin/bash -c "source setup.sh"```
+> `git clone https://github.com/tableau/TabPy.git`
+> `cd /TabPy`
+> `/bin/bash -c "source setup.sh"`
 install and exit out (^C)
 
 3. cd to root directory and create "start.sh":
