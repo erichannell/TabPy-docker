@@ -1,11 +1,11 @@
 from continuumio/miniconda:latest
 
-# hack to solve the error with running "source activate"
+# avoid errors with "source activate"
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-# hack to stop the setup script from running the server on install
+# stop the setup script from running the server on install
 # cat setup.sh | grep -v 'bash "$STARTUPPATH/startup.sh" $PORT' > install.sh
-# basically I just remove the startup line and rename the new file to install.sh
+# basically just removes the startup line and rename the new file to install.sh
 
 RUN git clone https://github.com/tableau/TabPy.git && \
 	cd TabPy && \
@@ -19,12 +19,6 @@ RUN source activate Tableau-Python-Server && \
 	python -m textblob.download_corpora lite && \
 	python -m nltk.downloader vader_lexicon
 	
-#RUN source activate Tableau-Python-Server && 
-
-#RUN source activate Tableau-Python-Server && \
-#	python -m textblob.download_corpora lite && \
-#	python -m nltk.downloader vader_lexicon
-
 ADD start.sh /start.sh
 
 ENTRYPOINT bin/bash start.sh
