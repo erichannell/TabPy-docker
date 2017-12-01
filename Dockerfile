@@ -12,10 +12,11 @@ RUN git clone https://github.com/tableau/TabPy.git && \
 	cat setup.sh | grep -v 'bash "$STARTUPPATH/startup.sh" $PORT' > install.sh && \
 	/bin/bash -c "source install.sh"
 
+ADD requirements.txt /requirements.txt
+
 RUN source activate Tableau-Python-Server && \
 	pip install --upgrade pip && \
-	pip install numpy pandas scikit-learn==0.17.1 scipy textblob nltk vaderSentiment && \
-	pip install reverse_geocoder geopy && \
+	pip install -r /requirements.txt && \
 	python -m textblob.download_corpora lite && \
 	python -m nltk.downloader vader_lexicon
 	
