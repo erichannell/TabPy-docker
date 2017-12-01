@@ -1,0 +1,10 @@
+pandas
+numpy
+scipy
+textblob
+nltk
+vaderSentiment
+datetime
+sklearn
+reverse_geocoder
+geopy
